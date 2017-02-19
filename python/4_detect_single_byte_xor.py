@@ -1,5 +1,4 @@
 #!/usr/local/bin/python3
-
 # Challenge 4: Detect single-character XOR
 
 import re
@@ -20,6 +19,9 @@ bestbyte = {}
 
 for l in lines:
     freq = {} 
+    # Try xor-ing against all possible byte values, keeping a tally of
+    # matches in character class [etoain shrdlu] in each resulting
+    # string
     for i in range(0,256):
         s = hex2str(xor_w_byte(l, "{:x}".format(i)))
         freq[i] = len(re.findall("[ETAOIN SHRDLU]", s, re.IGNORECASE))
