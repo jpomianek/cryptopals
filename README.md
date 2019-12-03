@@ -1,2 +1,2 @@
 # cryptopals
-Solutions to the Cryptopals challenges
+My own solutions to the Cryptopals challenges (https://cryptopals.org)
